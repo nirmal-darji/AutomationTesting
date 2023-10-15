@@ -1,0 +1,260 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-10-15T08:10:27.402Z",
+        "line": 14,
+        "name": "Verify if place is successfully added using AddPlace API",
+        "description": "",
+        "id": "validating-place-apis;verify-if-place-is-successfully-added-using-addplace-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1207203300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I have AddPlace API payload with \"NirmalHouse\" and \"French\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NirmalHouse\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"French\"",
+                  "offset": 51
+                }
+              ],
+              "location": "stepDefinations.stepDefination.i_have_add_place_api_payload(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1888851600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I hit the \"addPlace\" API with \"POST\" method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"addPlace\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinations.stepDefination.i_hit_the_api(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2995600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I verify status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinations.stepDefination.i_verify_status_code_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 731996500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I verify \"status\" in the response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinations.stepDefination.i_verify_in_the_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21003100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I verify \"scope\" in the response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinations.stepDefination.i_verify_in_the_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1652642800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I verify \"place_id\" created maps to \"NirmalHouse\" using \"getPlace\" API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"place_id\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"NirmalHouse\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"getPlace\"",
+                  "offset": 56
+                }
+              ],
+              "location": "stepDefinations.stepDefination.i_verify_created_maps_to_using_api(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T08:10:32.985Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinations.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Verify place is deleted successfully using DeletePlace API",
+        "description": "",
+        "id": "validating-place-apis;verify-place-is-deleted-successfully-using-deleteplace-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 986000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I have DeletePlace API payload",
+            "match": {
+              "location": "stepDefinations.stepDefination.i_have_delete_place_api_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1192809400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I hit the \"deletePlace\" API with \"POST\" method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"deletePlace\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinations.stepDefination.i_hit_the_api(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I verify status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinations.stepDefination.i_verify_status_code_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 14983000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I verify \"status\" in the response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinations.stepDefination.i_verify_in_the_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place APIs",
+    "description": "",
+    "id": "validating-place-apis",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/placeValidations.feature",
+    "tags": []
+  }
+]
