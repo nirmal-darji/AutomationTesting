@@ -1,4 +1,4 @@
 mvn test
 mvn test -Dcucumber.filter.tags="@AddPlace" - single tag
 mvn test -Dcucumber.filter.tags="@AddPlace or @DeletePlace" - multiple tags
-mvn test verify -Dcucumber.filter.tags="@AddPlace or @DeletePlace" - multiple tags
+mvn test verify -Dcucumber.filter.tags="@AddPlace or @DeletePlace" - cucumber report
